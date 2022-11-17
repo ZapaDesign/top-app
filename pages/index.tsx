@@ -1,12 +1,14 @@
-import { Button, Htag, P, Tag } from '../components'
+import { useEffect, useState } from 'react'
+import { Button, Htag, P, Tag, Rating } from '../components'
 
 export default function Home(): JSX.Element {
+    const [rating, setRating] = useState<number>(4)
     return (
         <main>
-            <Htag tag="h1">Hello, world!</Htag>
+            <Htag tag="h1">Home</Htag>
             <section>
                 <h2>Buttons</h2>
-                <Button appearance="primary" arrow="down">
+                <Button appearance="primary" arrow="down" onClick={() => setCounter((x) => x + 1)}>
                     Click me!
                 </Button>
                 <Button appearance="ghost" arrow="right">
@@ -75,6 +77,10 @@ export default function Home(): JSX.Element {
                         Small Primary
                     </Tag>
                 </div>
+            </section>
+            <section>
+                <h2>Rating</h2>
+                <Rating rating={rating} isEditable setRating={setRating} />
             </section>
         </main>
     )
