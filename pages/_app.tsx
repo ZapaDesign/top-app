@@ -4,7 +4,7 @@ import Head from 'next/head'
 
 export default function App({ Component, pageProps }: AppProps): JSX.Element {
     return (
-        <div>
+        <>
             <Head>
                 <title>My Top</title>
                 <meta name="description" content="zapaDEV e7n next app" />
@@ -17,6 +17,6 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
                 />
             </Head>
             <Component {...pageProps} />
-        </div>
+        </>
     )
 }

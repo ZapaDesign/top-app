@@ -1,8 +1,12 @@
 :root {
     --black: #3b434e;
+    --gray-light: #ebebeb;
+    --gray: #b3c0d9;
     --white: white;
     --primary: #7653fc;
-    --red: #fc836d;
+    --primary-hover: #5132ce;
+    --red-light: #fc836d;
+    --red: #fa2702;
     --green: #1dc37e;
     --green-light: #c8f8e4;
 
@@ -26,6 +30,10 @@ a {
 
 * {
     box-sizing: border-box;
+}
+
+main {
+    padding: 20px;
 }
 
 @media (prefers-color-scheme: dark) {
