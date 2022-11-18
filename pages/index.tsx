@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import { Button, Htag, P, Tag, Rating } from '../components'
+import { witchLayout } from '../layout/Layout'
 
-export default function Home(): JSX.Element {
+function Home(): JSX.Element {
     const [rating, setRating] = useState<number>(4)
     return (
         <main>
@@ -85,3 +86,5 @@ export default function Home(): JSX.Element {
         </main>
     )
 }
+
+export default witchLayout(Home)
