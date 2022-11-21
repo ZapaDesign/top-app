@@ -26,7 +26,7 @@ export default witchLayout(Home)
 
 export const getStaticProps = async () => {
     // const { data: res } = await axios.post(process.env.NEXT_PUBLIC_DOMAIN + '/posts')
-    const res = await fetch(process.env.NEXT_PUBLIC_DOMAIN + '/posts')
+    const res = await fetch(process.env.NEXT_PUBLIC_API + '/posts')
     const posts = await res.json()
     return {
         props: {
